@@ -11,11 +11,12 @@ $ source env/bin/activate
 <br>
 (env)$ cd bamazon
 <br>
-(env)$ python3 manage.py migrate
-<br>
 (env)$ python3 manage.py runserver
 <br>
 <br>
+<br>
 admin panel /admin
+<br>
 arch
+<br>
 123qaz
