@@ -2,14 +2,11 @@ from django.contrib import admin
 from .models import Author, Book
 # Register your models here.
 
-# admin.site.register(Author)
-
-
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
     """Книги"""
-    list_display = ("title", "year", "country"  )
+    list_display = ("title", "year", "country")
     list_filter = ("title", "author", "country")
     search_fields = ("title", "author")
     fieldsets = (
@@ -24,10 +21,11 @@ class BookAdmin(admin.ModelAdmin):
         }),
     )
 
+
 @admin.register(Author)
 class AuthorAdmin(admin.ModelAdmin):
     """Авторы"""
-    list_display = ("name", "age", "url"  )
+    list_display = ("name", "age", "url")
     list_filter = ("name", "age",)
     search_fields = ("name",)
     fieldsets = (
@@ -38,4 +36,3 @@ class AuthorAdmin(admin.ModelAdmin):
             "fields": ("description", "url")
         }),
     )
-

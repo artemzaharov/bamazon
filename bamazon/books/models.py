@@ -35,11 +35,9 @@ class Book(models.Model):
     def __str__(self):
         return self.title
 
-    # dont forget to import reverse
     def get_absolute_url(self):
         return reverse('book_detail', kwargs={'slug': self.url})
 
     class Meta:
-
         verbose_name = 'Книга'
         verbose_name_plural = 'Книги'
