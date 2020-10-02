@@ -66,14 +66,31 @@
 
                 <div class="col" id="Bamazon-basics">
                     <h2>Explore Bamazon Books</h2>
-                     {% for book in book_list %}
+                    {% for book in book_list %}
                     <a href="{{ book.get_absolute_url }}" class="thumbnail text-center">
                         <img src="{{ book.poster.url }}" width="200" height="250" alt="Product 1">
                         <span class="caption">{{ book.title }}</span>
                     </a>
-                       {% endfor %}
+
+                    {% endfor %}
+                    </br>
+                    </br>
+                    <div class="pagination">
+                        <span class="step-links">
+                            {% if page_obj.has_previous %}
+                            <a href="?page={{ page_obj.previous_page_number }}">
+                                <-Priveous</a> {% endif %} <span class="current">{{ page_obj.number }} of
+                                    {{ page_obj.paginator.num_pages }}.
+                        </span>
+                        {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}">Next-></a>
+                        {% endif %}
+                        </span>
+                    </div>
+
                 </div>
             </div>
         </div>
 </section>
+
 {% endblock content %}
