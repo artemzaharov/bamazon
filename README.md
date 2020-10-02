@@ -5,7 +5,7 @@ $ cd bamazon
 <br>
 $ python3 -m venv env
 <br>
-$ sourse env/bin/activate
+$ source env/bin/activate
 <br>
 (env)$ pip install -r requirements.txt
 <br>
