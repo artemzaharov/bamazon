@@ -1,4 +1,4 @@
-# bamazon
+# bamazon is simple clone of amazon
 $ git clone https://github.com/artemzaharov/bamazon.git
 <br>
 $ cd bamazon
